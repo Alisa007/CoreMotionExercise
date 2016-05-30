@@ -31,6 +31,7 @@ class ViewController: UIViewController {
                 self.rollLabel.text = String(format: "%.2f", roll)
                 self.pitchLabel.text = String(format: "%.2f", pitch)
 
+//                Should be facing user at roll = 0 and pitch = pi/2
                 var rotation: CATransform3D = CATransform3DIdentity
                 rotation = CATransform3DRotate(rotation, pitch - CGFloat(M_PI_2), 1, 0, 0);
                 rotation = CATransform3DRotate(rotation, roll, 0, 1, 0);
